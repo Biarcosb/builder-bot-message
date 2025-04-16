@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  boot-messages:
+    container_name: boot-messages
+    image: boot-messages-new
+    build: .
+    restart: always
+    ports:
+      - "3008:3008"
