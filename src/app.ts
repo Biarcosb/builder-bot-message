@@ -43,7 +43,6 @@ const main = async () => {
             return res.end('trigger')
         })
     )
-
     adapterProvider.server.post(
         '/v1/blacklist',
         handleCtx(async (bot, req, res) => {
@@ -55,8 +54,6 @@ const main = async () => {
             return res.end(JSON.stringify({ status: 'ok', number, intent }))
         })
     )
-
     httpServer(+PORT)
 }
-
 main()
