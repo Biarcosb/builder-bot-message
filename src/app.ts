@@ -19,7 +19,6 @@ const main = async () => {
         provider: adapterProvider,
         database: adapterDB,
     })
-
     adapterProvider.server.post(
         '/v1/messages',
         handleCtx(async (bot, req, res) => {
@@ -28,7 +27,6 @@ const main = async () => {
             return res.end('sended')
         })
     )
-
     adapterProvider.server.post(
         '/v1/register',
         handleCtx(async (bot, req, res) => {
@@ -37,7 +35,6 @@ const main = async () => {
             return res.end('trigger')
         })
     )
-
     adapterProvider.server.post(
         '/v1/samples',
         handleCtx(async (bot, req, res) => {
